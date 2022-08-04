@@ -1,46 +1,68 @@
+export const setNodes = (nodes) => {
+  return {
+    type: 'SET_NODES',
+    nodes,
+  }
+}
+
 const initialState = {
   nodes: [
     {
-      id: '1',
-      type: 'circleNode',
-      data: { parent1: 'Bob', parent2: 'Hannah' },
-      position: { x: 401, y: 20 },
-      zIndex: 4,
+      // person1: 'bob',
+      children: [
+        // {
+        //   person1: 'alex',
+        //   id: 2,
+        // },
+      ],
+      id: 1,
+      // person1: 'Bob',
+      // person2: '',
+      // children: [
+      //   {
+      //     person1: 'George',
+      //     person2: 'Hannah',
+      //     children: [
+      //       {
+      //         person1: 'Tina',
+      //         children: [
+      //           {
+      //             person1: 'Jaden',
+      //           },
+      //         ],
+      //       },
+      //       {
+      //         person1: 'Adam',
+      //         children: [
+      //           {
+      //             person1: 'Mark',
+      //             person2: 'Jess',
+      //             children: [
+      //               {
+      //                 person1: 'Lucas',
+      //               },
+      //               {
+      //                 person1: 'Anna',
+      //               },
+      //             ],
+      //           },
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // ],
     },
-
-    {
-      id: '2',
-      type: 'circleNode',
-      data: {
-        label: (
-          <div
-            onClick={() => console.log('asdsad')}
-            style={{ borderRadius: '20px', backgroundColor: 'red' }}
-          >
-            Default Node
-          </div>
-        ),
-      },
-      position: { x: 414, y: 200 },
-      zIndex: 3,
-    },
-    {
-      id: '3',
-      type: 'circleNode',
-      data: { label: 'Output Node' },
-      position: { x: 250, y: 150 },
-      zIndex: 3,
-    },
-  ],
-  edges: [
-    { id: '1233', source: '1', target: '2', sourceHandle: 'a' },
-    { id: '32323', source: '1', target: '3', sourceHandle: 'b' },
   ],
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
   switch (action.type) {
+    case 'SET_NODES':
+      return {
+        // ...state,
+        nodes: action.nodes,
+      }
     default:
       return state
   }
