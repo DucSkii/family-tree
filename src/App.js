@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid'
 import addButton from './images/add-button.png'
 import defaultAvatar from './images/default_avatar.jpg'
 import { db } from './firebase'
+import { DEFAULT_TREE } from './hooks/useTree/const'
 import './styles.css'
 
 const App = () => {
@@ -141,6 +142,7 @@ const App = () => {
     foundItem.person1 = person1
     foundItem.person2 = person2
     foundItem.image = personImage
+    setSavedTree({})
     setTree([...tempTree])
     handleModalClose()
   }
@@ -158,6 +160,7 @@ const App = () => {
       parentId: id,
     }
     foundItem.children.push(newPerson)
+    setSavedTree({})
     setTree([...tempTree])
     handleModalClose()
   }

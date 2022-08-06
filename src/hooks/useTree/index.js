@@ -3,7 +3,7 @@ import { DEFAULT_TREE } from './const'
 
 export const useTree = () => {
   const [tree, setTree] = useState(DEFAULT_TREE)
-  const [savedTree, setSavedTree] = useState(undefined)
+  const [savedTree, setSavedTree] = useState(DEFAULT_TREE)
   const [treeID, setTreeID] = useState(undefined)
   return useMemo(
     () => ({
@@ -11,7 +11,8 @@ export const useTree = () => {
       setTree,
       treeID,
       setTreeID,
-      savedTree, setSavedTree
+      savedTree,
+      setSavedTree,
     }),
     [tree, setTree, treeID, setTreeID, savedTree, setSavedTree]
   )
