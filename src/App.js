@@ -9,7 +9,6 @@ import { v4 as uuidv4 } from 'uuid'
 import addButton from './images/add-button.png'
 import defaultAvatar from './images/default_avatar.jpg'
 import { db } from './firebase'
-import { DEFAULT_TREE } from './hooks/useTree/const'
 import './styles.css'
 
 const App = () => {
