@@ -13,13 +13,13 @@
   left: 50%;
   transform: translate(-50%, -100%);
   width: 400px;
-  height: 300px;
+  height: 250px;
   background-color: #FFFFFF;
   outline: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  justify-content: space-around;
   padding: 0px 30px;
 }
 
@@ -29,4 +29,41 @@
 
 .name-input {
   margin-bottom: 10px;
+}
+
+.modal-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.start-hub-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+  height: 200px;
+  background-color: #FFFFFF;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.tree-id {
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+}
+
+.buttons {
+  position: absolute;
+  margin: 40px;
 }
