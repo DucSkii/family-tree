@@ -141,7 +141,6 @@ const App = () => {
     foundItem.person1 = person1
     foundItem.person2 = person2
     foundItem.image = personImage
-    setSavedTree({})
     setTree([...tempTree])
     handleModalClose()
   }
@@ -159,7 +158,6 @@ const App = () => {
       parentId: id,
     }
     foundItem.children.push(newPerson)
-    setSavedTree({})
     setTree([...tempTree])
     handleModalClose()
   }
@@ -208,7 +206,15 @@ const App = () => {
       .add({ tree: tree })
       .then((docRef) => {
         setTreeID(docRef.id)
-        setSavedTree(tree)
+        setSavedTree([
+          {
+            person1: '',
+            person2: '',
+            image: '',
+            children: [],
+            id: 1,
+          },
+        ])
       })
       .catch((err) => console.log('err', err))
   }
